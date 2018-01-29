@@ -1,0 +1,21 @@
+li {
+    border-left: 2px solid black;
+    border-right:2px solid black;
+    list-style: none;
+    padding: 20px;
+    margin: 20px;
+}
+
+#container {
+    width: 20%;
+    margin: 0 auto;
+
+}
+
+#info {
+    text-align: center;
+}
+
+label {
+    text-decoration: underline;
+}

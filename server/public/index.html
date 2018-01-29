@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Message Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ANGULAR -->
+
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+
+    <!-- ANGULAR MATERIAL -->
+
+    <!-- <link href="vendors/angular-material.min.css" rel="stylesheet" type="text/css">
+    <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-material.min.js" charset="utf-8"></script> -->
+
+    <!-- ClIENT -->
+
+    <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/message.controller.js"></script>
+    <script src="scripts/services/message.service.js"></script>
+    <link rel="stylesheet" media="screen" href="styles/styles.css" />
+
+</head>
+<body ng-app="myApp">
+    <main ng-controller='MessageController as vm'>
+        <div id="info">
+            <h1>AIM Instant Messaging 2.0</h1>
+            <p>"The hub of internet breakups"</p>
+            <input type="text" ng-model="vm.person.name" placeholder="Name">
+            <input type="text"ng-model="vm.person.comment" placeholder="Message">
+            <button ng-click="vm.submitComment(vm.person)">Send</button>
+        </div>
+        <div ng-repeat="comment in vm.message.list">
+            <ul id="container">
+                <li><label>{{comment.name}}</label> <p>{{comment.comment}}</p></li>
+            </ul>
+        </div>
+    </main>     
+</body>
+</html>
